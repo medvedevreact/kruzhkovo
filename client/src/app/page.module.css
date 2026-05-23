@@ -1,0 +1,68 @@
+.about {
+  padding: 48px 0;
+}
+
+.why {
+  padding: 48px 0;
+}
+
+.faq {
+  padding: 48px 0;
+}
+
+.whyTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.whyTitleDecoration {
+  position: absolute;
+  left: -45px;
+  z-index: -1;
+}
+
+.whyTitleText {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--font-druk), sans-serif;
+}
+
+.whyReasons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.whyReason {
+  position: relative;
+  flex: 1 1 280px;
+  aspect-ratio: 1490 / 965;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.whyReasonBg {
+  object-fit: cover;
+}
+
+.whyReasonContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 48px 20px;
+  text-align: center;
+}
+
+.whyReasonText {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
