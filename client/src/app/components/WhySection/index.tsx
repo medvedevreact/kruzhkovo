@@ -1,8 +1,36 @@
 import Image from "next/image";
+import type { IconType } from "react-icons";
+import { MdArticle, MdAutoAwesome, MdSportsBasketball } from "react-icons/md";
 
 import { Container } from "@/shared/ui/Container";
 
 import styles from "./index.module.css";
+
+const WHY_REASONS: {
+  id: string;
+  bg: string;
+  Icon: IconType;
+  lines: [string, string];
+}[] = [
+  {
+    id: "catalog",
+    bg: "/why-reason-bg-rating.png",
+    Icon: MdSportsBasketball,
+    lines: ["Сотни кружков и секций", "в Москве для детей"],
+  },
+  {
+    id: "ai",
+    bg: "/why-reason-bg-loyalty.png",
+    Icon: MdAutoAwesome,
+    lines: ["ИИ подскажет подходящий", "кружок или секцию"],
+  },
+  {
+    id: "blog",
+    bg: "/why-reason-bg-globe.png",
+    Icon: MdArticle,
+    lines: ["Статьи и советы", "в блоге для родителей"],
+  },
+];
 
 export function WhySection() {
   return (
@@ -21,74 +49,26 @@ export function WhySection() {
           </div>
 
           <div className={styles.reasons}>
-            <div className={styles.reason}>
-              <Image
-                src="/why-reason-bg-rating.png"
-                alt=""
-                fill
-                unoptimized
-                sizes="(max-width: 900px) 100vw, 400px"
-                className={styles.reasonBg}
-              />
-              <div className={styles.reasonContent}>
+            {WHY_REASONS.map(({ id, bg, Icon, lines }) => (
+              <div key={id} className={styles.reason}>
                 <Image
-                  src="/why-reason-icon-rating.png"
+                  src={bg}
                   alt=""
-                  width={64}
-                  height={64}
-                  className={styles.reasonIcon}
+                  fill
+                  unoptimized
+                  sizes="(max-width: 900px) 100vw, 400px"
+                  className={styles.reasonBg}
                 />
-                <p className={styles.reasonText}>
-                  Рейтинг с лучшими <br /> секциями в разных категориях
-                </p>
+                <div className={styles.reasonContent}>
+                  <Icon className={styles.reasonIcon} aria-hidden />
+                  <p className={styles.reasonText}>
+                    {lines[0]}
+                    <br />
+                    {lines[1]}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className={styles.reason}>
-              <Image
-                src="/why-reason-bg-loyalty.png"
-                alt=""
-                fill
-                unoptimized
-                sizes="(max-width: 900px) 100vw, 400px"
-                className={styles.reasonBg}
-              />
-              <div className={styles.reasonContent}>
-                <Image
-                  src="/why-reason-icon-loyalty.png"
-                  alt=""
-                  width={64}
-                  height={64}
-                  className={styles.reasonIcon}
-                />
-                <p className={styles.reasonText}>
-                  Система лояльности. Используй баллы на сайте и получай скидки
-                  до 50%
-                </p>
-              </div>
-            </div>
-            <div className={styles.reason}>
-              <Image
-                src="/why-reason-bg-globe.png"
-                alt=""
-                fill
-                unoptimized
-                sizes="(max-width: 900px) 100vw, 400px"
-                className={styles.reasonBg}
-              />
-              <div className={styles.reasonContent}>
-                <Image
-                  src="/why-reason-icon-globe.png"
-                  alt=""
-                  width={64}
-                  height={64}
-                  className={styles.reasonIcon}
-                />
-                <p className={styles.reasonText}>
-                  Доступ для иностранных <br />
-                  студентов
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </Container>

@@ -11,16 +11,20 @@ export function AboutSection() {
       <Container>
         <div className={styles.aboutInner}>
           <div className={styles.aboutContent}>
-            <h2 className={styles.aboutTitle}>Удобный агрегатор детских секций и кружков</h2>
-            <span className={styles.aboutText}>Здесь вы можете быстро и легко найти все, что вам нужно</span>
-            <Link href='/search' className={styles.aboutButton}>
+            <h2 className={styles.aboutTitle}>
+              Удобный агрегатор <br /> детских секций <br /> и кружков
+            </h2>
+            <span className={styles.aboutText}>
+              Здесь вы можете быстро и легко найти все, что вам нужно
+            </span>
+            <Link href="/search" className={styles.aboutButton}>
               <span>Перейти к поиску</span>
               <ToSearchIcon />
             </Link>
           </div>
           <div className={styles.aboutImage}>
             <Image
-              src="/images/about-section/guitar.png"
+              src="/images/about-section/guitar.svg"
               alt=""
               width={500}
               height={500}

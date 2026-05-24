@@ -18,19 +18,20 @@
 }
 
 .aboutTitle {
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 700;
   font-family: var(--font-druk), sans-serif;
+  line-height: 1;
 }
 
 .aboutText {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 500;
   max-width: 450px;
 }
 
 .aboutButton {
-  max-width: 420px;
+  max-width: 340px;
   height: 70px;
 
   display: flex;

@@ -44,6 +44,9 @@
 }
 
 .reasonIcon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
 }
 
 .reasonContent {
@@ -60,6 +63,7 @@
 }
 
 .reasonText {
+  margin: 0;
   font-size: 15px;
   font-weight: 500;
   line-height: 1.4;
