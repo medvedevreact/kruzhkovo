@@ -1,0 +1,220 @@
+.header {
+  background-color: var(--color-accent);
+  padding: 32px 0;
+}
+
+.headerInner {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.headerLogoText {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.menuToggle {
+  display: none;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 8px;
+
+  min-width: 44px;
+  min-height: 44px;
+
+  border: none;
+  border-radius: 0;
+
+  background-color: transparent;
+  color: var(--color-text);
+
+  cursor: pointer;
+}
+
+.menuToggle:hover {
+  opacity: 0.72;
+}
+
+.burger {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  width: 26px;
+
+  height: 20px;
+
+  margin: auto;
+}
+
+.burgerLine {
+  display: block;
+
+  height: 4px;
+
+  border-radius: 1px;
+
+  background-color: var(--color-text);
+}
+
+.menuCloseIcon {
+  flex-shrink: 0;
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.headerNavLink {
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.headerNavLink:hover {
+  background-color: var(--color-primary-light);
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 24px 0;
+  }
+
+  .headerLogoText {
+    font-size: 22px;
+  }
+
+  .headerNav {
+    gap: 10px;
+  }
+
+  .headerNavLink {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 18px 0;
+  }
+
+  .headerInner {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+
+  .headerLogoImage {
+    width: 28px;
+    height: 28px;
+  }
+
+  .headerLogoText {
+    font-size: 18px;
+  }
+
+  .menuToggle {
+    display: flex;
+  }
+
+  .headerNav {
+    display: none;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+
+    gap: 10px;
+
+    padding-top: 8px;
+
+    flex-basis: 100%;
+
+    animation: fadeInNav 0.2s ease;
+  }
+
+  .headerNavOpen {
+    display: flex;
+  }
+
+  .headerNav .headerNavLink {
+    justify-content: center;
+    height: auto;
+    min-height: 48px;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 14px 0;
+  }
+
+  .headerLogo {
+    gap: 8px;
+  }
+
+  .headerLogoImage {
+    width: 26px;
+    height: 26px;
+  }
+
+  .headerLogoText {
+    font-size: 16px;
+  }
+
+  .menuToggle {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 8px;
+  }
+
+  .burger {
+    width: 24px;
+    height: 18px;
+
+    gap: 4px;
+  }
+
+  .burgerLine {
+    height: 3px;
+  }
+
+  .headerNav .headerNavLink {
+    min-height: 44px;
+    font-size: 14px;
+  }
+}
+
+@keyframes fadeInNav {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

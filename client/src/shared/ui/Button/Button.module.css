@@ -1,0 +1,17 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  line-height: 0;
+}

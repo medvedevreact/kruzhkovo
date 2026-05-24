@@ -1,42 +1,37 @@
-.about {
+.section {
   padding: 48px 0;
 }
 
-.why {
-  padding: 48px 0;
+.inner {
 }
 
-.faq {
-  padding: 48px 0;
-}
-
-.whyTitle {
+.title {
   display: flex;
   align-items: center;
   gap: 8px;
   position: relative;
 }
 
-.whyTitleDecoration {
+.titleDecoration {
   position: absolute;
   left: -45px;
   z-index: -1;
 }
 
-.whyTitleText {
+.titleText {
   font-size: 32px;
   font-weight: 700;
   font-family: var(--font-druk), sans-serif;
 }
 
-.whyReasons {
+.reasons {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
   margin-top: 40px;
 }
 
-.whyReason {
+.reason {
   position: relative;
   flex: 1 1 280px;
   aspect-ratio: 1490 / 965;
@@ -44,11 +39,14 @@
   overflow: hidden;
 }
 
-.whyReasonBg {
+.reasonBg {
   object-fit: cover;
 }
 
-.whyReasonContent {
+.reasonIcon {
+}
+
+.reasonContent {
   position: relative;
   z-index: 1;
   display: flex;
@@ -61,7 +59,7 @@
   text-align: center;
 }
 
-.whyReasonText {
+.reasonText {
   font-size: 15px;
   font-weight: 500;
   line-height: 1.4;

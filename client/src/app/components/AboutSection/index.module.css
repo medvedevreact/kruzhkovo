@@ -1,0 +1,160 @@
+.about {
+  padding: 48px 0;
+}
+
+.aboutInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-width: 0;
+  flex: 1 1 320px;
+}
+
+.aboutTitle {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: var(--font-druk), sans-serif;
+}
+
+.aboutText {
+  font-size: 32px;
+  font-weight: 500;
+  max-width: 450px;
+}
+
+.aboutButton {
+  max-width: 420px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.aboutImage {
+  flex: 0 1 500px;
+  max-width: min(500px, 46vw);
+  position: relative;
+}
+
+.aboutImageImg {
+  width: 100%;
+  height: auto;
+}
+
+.aboutImagePinkStar {
+  position: absolute;
+  top: 450px;
+  left: 0;
+}
+
+.aboutImageGreenStar {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 1024px) {
+  .aboutInner {
+    gap: 24px;
+  }
+
+  .aboutTitle {
+    font-size: 40px;
+  }
+
+  .aboutText {
+    font-size: 26px;
+    max-width: 100%;
+  }
+
+  .aboutButton {
+    max-width: 100%;
+    font-size: 20px;
+    height: 64px;
+  }
+
+  .aboutImage {
+    max-width: min(420px, 42vw);
+  }
+
+  .aboutImagePinkStar {
+    display: none;
+  }
+
+  .aboutImageGreenStar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 0;
+    padding-top: 32px;
+  }
+
+  .aboutInner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .aboutTitle {
+    font-size: 32px;
+  }
+
+  .aboutText {
+    font-size: 20px;
+  }
+
+  .aboutButton {
+    height: auto;
+    min-height: 56px;
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+
+  .aboutImage {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 0;
+    padding-top: 24px;
+  }
+
+  .aboutTitle {
+    font-size: 26px;
+  }
+
+  .aboutText {
+    font-size: 18px;
+  }
+
+  .aboutContent {
+    gap: 16px;
+  }
+
+  .aboutButton {
+    min-height: 52px;
+    font-size: 17px;
+  }
+}

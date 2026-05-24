@@ -1,8 +1,8 @@
-import { Container } from "@/components/Container";
+import { Container } from "@/shared/ui/Container";
 import Image from "next/image";
 import Link from "next/link";
 import { FaOdnoklassniki, FaTelegram, FaVk } from "react-icons/fa";
-import styles from "./Footer.module.css";
+import styles from "./index.module.css";
 
 export const Footer = () => {
   return (
@@ -48,7 +48,7 @@ export const Footer = () => {
                 </a>
               </div>
               <p className={styles.footerCopy}>
-                © 2025 кружки.ру. <br />
+                © 2026 kruzhkovo.ru <br />
                 Все права защищены.
               </p>
             </div>
