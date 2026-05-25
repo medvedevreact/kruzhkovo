@@ -116,6 +116,10 @@
     gap: 0;
   }
 
+  .aboutContent {
+    flex: none;
+  }
+
   .aboutTitle {
     font-size: 32px;
   }

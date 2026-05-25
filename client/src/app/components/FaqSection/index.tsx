@@ -52,15 +52,27 @@ export function FaqSection() {
     <section className={styles.faq}>
       <Container>
         <div className={styles.faqInner}>
-          <Image
-            src="/icons/green-star.svg"
-            alt=""
-            width={85}
-            height={85}
-            className={styles.faqTitleDecoration}
-            sizes="85px"
-          />
-          <h2 className={styles.faqTitle}>Частые вопросы</h2>
+          <div className={styles.faqHeader}>
+            <Image
+              src="/icons/green-star.svg"
+              alt=""
+              width={85}
+              height={85}
+              className={styles.faqTitleDecoration}
+              sizes="85px"
+            />
+            <h2 className={styles.faqTitle}>
+              Частые вопросы
+              <Image
+                src="/vopros.png"
+                alt=""
+                width={68}
+                height={90}
+                className={styles.faqTitleQuestion}
+                sizes="68px"
+              />
+            </h2>
+          </div>
           <ul className={styles.faqList}>
             {FAQ_ITEMS.map((item) => {
               const isOpen = !!open[item.id];
