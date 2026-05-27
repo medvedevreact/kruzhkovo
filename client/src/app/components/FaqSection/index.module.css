@@ -227,5 +227,6 @@
   }
   .faqTitleQuestion {
     width: 24px;
+    top: 0.1em;
   }
 }
