@@ -5,6 +5,7 @@ import { Button } from "@/shared/ui/Button";
 import clsx from "clsx";
 import Image from "next/image";
 import { useCallback, useId, useState } from "react";
+import { MdClose } from "react-icons/md";
 
 import styles from "./index.module.css";
 
@@ -40,14 +41,15 @@ export const Header = () => {
             aria-controls={navId}
             aria-label={menuOpen ? "Закрыть меню" : "Открыть меню"}
           >
-            <span
-              className={clsx(styles.burger, menuOpen && styles.burgerOpen)}
-              aria-hidden
-            >
-              <span className={styles.burgerLine} />
-              <span className={styles.burgerLine} />
-              <span className={styles.burgerLine} />
-            </span>
+            {menuOpen ? (
+              <MdClose className={styles.menuCloseIcon} size={30} aria-hidden />
+            ) : (
+              <span className={styles.burger} aria-hidden>
+                <span className={styles.burgerLine} />
+                <span className={styles.burgerLine} />
+                <span className={styles.burgerLine} />
+              </span>
+            )}
           </button>
           <nav
             id={navId}
@@ -58,13 +60,13 @@ export const Header = () => {
             </Button>
             <Button
               as="link"
-              href="/"
+              href="/categories"
               className={styles.headerNavLink}
               onClick={closeMenu}
             >
               Категории
             </Button>
-            <Button as="link" href="/" className={styles.headerNavLink} onClick={closeMenu}>
+            <Button as="link" href="/blog" className={styles.headerNavLink} onClick={closeMenu}>
               Блог
             </Button>
           </nav>

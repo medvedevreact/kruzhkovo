@@ -95,15 +95,11 @@ export function FaqSection() {
                       <ToSearchIcon />
                     </span>
                   </button>
-                  <div
-                    className={clsx(styles.faqPanel, isOpen && styles.faqPanelOpen)}
-                    role="region"
-                    aria-hidden={!isOpen}
-                  >
-                    <div className={styles.faqPanelInner}>
+                  {isOpen ? (
+                    <div className={styles.faqPanel} role="region">
                       <p className={styles.faqAnswer}>{item.answer}</p>
                     </div>
-                  </div>
+                  ) : null}
                 </li>
               );
             })}
