@@ -54,20 +54,24 @@ export const Footer = () => {
             </div>
           </div>
           <div className={styles.footerNav}>
-            <div className={styles.footerNavCol}>
-              <Link href="#">Секции и кружки</Link>
-              <Link href="#">Категории</Link>
-              <Link href="#">Рейтинг</Link>
+            <div className={styles.footerNavGroup}>
+              <div className={styles.footerNavCol}>
+                <Link href="#">Секции и кружки</Link>
+                <Link href="#">Категории</Link>
+                <Link href="#">Рейтинг</Link>
+              </div>
+              <div className={styles.footerNavCol}>
+                <Link href="#">Карта секций</Link>
+                <Link href="#">О сервисе</Link>
+                <Link href="#">Акции</Link>
+              </div>
             </div>
-            <div className={styles.footerNavCol}>
-              <Link href="#">Карта секций</Link>
-              <Link href="#">О сервисе</Link>
-              <Link href="#">Акции</Link>
-            </div>
-            <div className={styles.footerNavCol}>
-              <Link href="#">Блог</Link>
-              <Link href="#">Вакансии</Link>
-              <Link href="#">Контакты</Link>
+            <div className={styles.footerNavGroup}>
+              <div className={styles.footerNavCol}>
+                <Link href="#">Блог</Link>
+                <Link href="#">Вакансии</Link>
+                <Link href="#">Контакты</Link>
+              </div>
             </div>
           </div>
         </div>
