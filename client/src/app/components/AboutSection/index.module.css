@@ -143,11 +143,7 @@
 @media (max-width: 480px) {
   .about {
     padding: 0;
-    padding-top: 24px;
-  }
-
-  .aboutTitle {
-    font-size: 26px;
+    padding-top: 32px;
   }
 
   .aboutText {
@@ -161,5 +157,15 @@
   .aboutButton {
     min-height: 52px;
     font-size: 17px;
+  }
+}
+
+@media (max-width: 400px) {
+  .aboutTitle {
+    font-size: 28px;
+  }
+
+  .aboutButton {
+    padding: 5px 10px 5px 20px;
   }
 }

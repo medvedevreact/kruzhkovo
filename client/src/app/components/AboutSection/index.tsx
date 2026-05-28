@@ -17,7 +17,7 @@ export function AboutSection() {
             <span className={styles.aboutText}>
               Здесь вы можете быстро и легко найти все, что вам нужно
             </span>
-            <Link href="/search" className={styles.aboutButton}>
+            <Link href="/" className={styles.aboutButton}>
               <span>Перейти к поиску</span>
               <ToSearchIcon />
             </Link>
