@@ -65,6 +65,12 @@ export const Header = () => {
               Категории
             </Button>
             <Button as="link" href="/" className={styles.headerNavLink} onClick={closeMenu}>
+              Поиск
+            </Button>
+            <Button as="link" href="/" className={styles.headerNavLink} onClick={closeMenu}>
+              Помощь AI
+            </Button>
+            <Button as="link" href="/" className={styles.headerNavLink} onClick={closeMenu}>
               Блог
             </Button>
           </nav>
