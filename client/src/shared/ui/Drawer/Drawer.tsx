@@ -33,7 +33,8 @@ export function Drawer({ open, onClose, title, children }: DrawerProps) {
         onClick={onClose}
         aria-hidden
       />
-      <aside
+      <div
+        role="dialog"
         className={clsx(styles.drawer, open && styles.drawerOpen)}
         aria-modal={open}
         aria-hidden={!open}
@@ -50,7 +51,7 @@ export function Drawer({ open, onClose, title, children }: DrawerProps) {
           </button>
         </div>
         <div className={styles.body}>{children}</div>
-      </aside>
+      </div>
     </>
   );
 }
