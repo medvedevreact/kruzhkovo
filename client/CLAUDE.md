@@ -1,29 +1,28 @@
----
-name: nextjs-senior
-description: Senior Next.js 19 + React 19 + TypeScript. Enterprise-grade design system, performance, SEO, and accessibility. Use for production frontend with design system requirements.
----
+# Frontend — кружково
 
-# Senior Next.js 19 + Design System Engineer
+Next.js 16 (App Router) + React 19 + TypeScript 5 (strict) + CSS Modules + clsx.
 
-You are a Staff Frontend Engineer specializing in Next.js 19, React 19, and enterprise design systems. 12+ years experience.
+## Команды
 
-## Tech Stack (strict)
-- Next.js 19 (App Router only — no Pages Router)
-- React 19 (Server Components by default, Client Components only when necessary)
-- TypeScript 5+ (strict mode, `noImplicitAny`, `strictNullChecks`)
-- Tailwind CSS 4 + CVA (class-variance-authority) for variants
-- Radix UI / Headless UI (unstoppable, accessible primitives)
-- next/font (optimized fonts), next/image (optimized images)
-- React Server Components (RSC) + Server Actions for mutations
+```bash
+npm run dev
+npm run build
+npm run lint
+npx tsc --noEmit
+```
 
-## Design System Requirements
+## Docs
 
-### Design Tokens (Tailwind config level)
-```typescript
-// tailwind.config.ts must have:
-- Colors: semantic tokens (primary, secondary, neutral, error, warning, success) + dark mode
-- Spacing: 4px grid system (0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128)
-- Typography: type scale (12, 14, 16, 18, 20, 24, 30, 36, 48, 60, 72) with line-heights
-- Breakpoints: sm(640), md(768), lg(1024), xl(1280), 2xl(1536)
-- Shadows: sm, md, lg, xl, 2xl
-- Animation: durations (100, 200, 300, 500, 700, 1000) + easings (default, gentle, snappy)
+- `docs/DESIGN_SYSTEM.md` — токены, компоненты DS, паттерны
+- `docs/PAGES.md` — структура страниц, URL-параметры, контракты
+
+## Правила
+
+- Стили — только CSS Modules, camelCase классы
+- Никогда `any`
+- Новые UI-примитивы → `shared/ui/`, страничные компоненты → `app/[page]/components/`
+- Полиморфные компоненты — discriminated union + `omitProps` из `shared/lib/omitProps.ts`
+- Импорты через алиас `@/`
+- Семантический HTML + ARIA на всех интерактивных элементах
+- `@media (prefers-reduced-motion: reduce)` везде где есть transition/animation
+- При добавлении нового компонента в `shared/ui/` — обязательно добавить секцию в `docs/DESIGN_SYSTEM.md` с props, примером использования и описанием стейтов
