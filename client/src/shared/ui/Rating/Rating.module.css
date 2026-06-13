@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.star {
+  color: #f5a623;
+  font-size: 13px;
+}
+
+.value {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+.count {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}

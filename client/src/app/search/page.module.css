@@ -1,0 +1,21 @@
+.main {
+  padding: 40px 0 80px;
+}
+
+.heading {
+  font-family: var(--font-druk), sans-serif;
+  font-size: 32px;
+  color: var(--color-text);
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 24px 0 60px;
+  }
+
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}

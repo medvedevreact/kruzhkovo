@@ -1,0 +1,57 @@
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.total {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.option {
+  background: none;
+  border: none;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-family: var(--font-main), sans-serif;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+
+.option:hover {
+  color: var(--color-text);
+}
+
+.optionActive {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .bar {
+    gap: 8px;
+  }
+
+  .option {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .option {
+    transition: none;
+  }
+}

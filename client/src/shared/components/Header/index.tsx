@@ -4,6 +4,7 @@ import { Container } from "@/shared/ui/Container";
 import { Button } from "@/shared/ui/Button";
 import clsx from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useId, useState } from "react";
 
 import styles from "./index.module.css";
@@ -22,7 +23,7 @@ export const Header = () => {
     <header className={styles.header}>
       <Container>
         <div className={styles.headerInner}>
-          <div className={styles.headerLogo}>
+          <Link href="/" className={styles.headerLogo}>
             <Image
               src="/brand-logo.png"
               alt="Кружково"
@@ -31,7 +32,7 @@ export const Header = () => {
               className={styles.headerLogoImage}
             />
             <span className={styles.headerLogoText}>кружково</span>
-          </div>
+          </Link>
           <button
             type="button"
             className={styles.menuToggle}

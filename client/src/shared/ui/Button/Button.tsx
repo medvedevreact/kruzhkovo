@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import styles from "./Button.module.css";
 import type { ButtonProps } from "./Button.types";
-import { omitProps } from "./lib/omitProps";
+import { omitProps } from "@/shared/lib/omitProps";
 
 export function Button(props: ButtonProps) {
   const mergedClassName = clsx(styles.root, props.className);
